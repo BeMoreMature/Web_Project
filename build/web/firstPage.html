@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Ele Stores</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="firstPage.html">Ele Stores</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="firstPage.html">Home</a></li>
+                
+                <li><a href="#deal">Deals</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a onclick="display_alert();"/>iPhone</li>
+                    <li><a onclick="display_alert();">Android</a></li>
+                    <li><a onclick="display_alert();">Other</a></li>
+                    <script type="text/javascript">
+                      function display_alert(){
+                        alert("Please Sign in !!!");
+                      }
+                    </script>
+                  </ul>
+                  <li><a href="signup.html">Register</a></li>
+                </li>
+                <li><a href="Admin2.html">Entrance For Manager</a></li>
+              </ul>
+<!--              <div id="header" >
+              <form id="signin" name="signin" class="navbar-form navbar-right" action="signup.html">
+                <input type="submit" class="btn btn-success" value='Sign in' id="signinbtn" />
+              </form>
+              </div>-->
+              <div id="navbar" class="navbar-collapse collapse">
+                <form id="loginfrm" method="post" name="signin" class="navbar-form navbar-right" action="LoginServlet" >
+                    <input type="hidden" name="log" />
+                    <div class="form-group">
+                        <input type="text" name="lname"  placeholder="username" class="form-control" required  >
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="lpassword" placeholder="Password" class="form-control" required>
+                    </div>
+                    <!--<input type="button" class="btn btn-success" value='Sign In' id="signinbtn" onclick="signinnow()" />-->
+                    <input class="btn btn-success" type="submit" name="Login" value="Login"  />
+                </form>
+            </div>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="images/slide1.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>WHY CHOOSE US?</h1>
+              <p>Money Back Guarantee</br>Free Worldwide Shipping</br>Member Discount</br> 24/7 Online Support</br></p>
+              <p><a class="btn btn-lg btn-primary" href="signup.html" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="images/slide2.png" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              
+              <p><a class="btn btn-lg btn-primary" href="#deal" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="images/slide33.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>There's something for everyone with Prime</h1>
+              <p>Check out what's included with your Prime membership</p>
+              <p><a class="btn btn-lg btn-primary" href="#product" role="button">Browse Product</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row"><a name="product" ></a>
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/p1.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>iPhone</h2>
+          <p>Get up to $375 in credit toward the purchase of iPhone X when you trade in your eligible smartphone.</p>
+          <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Learn more</button></p>
+        </div><!-- /.col-lg-4 -->
+         <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Get up to $375 in credit toward a new iPhone.</h4>
+        </div>
+        <div class="modal-body">
+        	<p><img src="images/m1.png" alt="Generic placeholder image" width="500" height="200" align="center"></p>
+          <h3>iPhone X</h3>
+          <p>Our vision has always been to create an iPhone that is entirely screen. One so immersive the device itself disappears into the experience. And so intelligent it can respond to a tap, your voice, and even a glance. With iPhone X, that vision is now a reality. Say hello to the future.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/p2.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Android</h2>
+          <p>Android One is now on more phones than ever,like the Moto.</p>
+          <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Learn more</button></p>
+        </div><!-- /.col-lg-4 -->
+               <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Android at its best</h4>
+        </div>
+        <div class="modal-body">
+        	<p><img src="images/m2.png" alt="Generic placeholder image" width="500" height="140"></p>
+          	<p>This is the purest form of Android.Experience it on Xiaomi's powerful Mi A1.</p>
+          	<h3>This is Android, pure and simple</h3>
+			<p>
+			Android One guarantees you get the best version of Android, right out of the box. So you get the phone you want, just the way you want.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+        <div class="col-lg-4">
+          <img class="img-circle" src="images/p3.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Other</h2>
+          <p>Big on power and performance, with a display to match</p>
+          <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Learn more</button></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+               <!-- Modal -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Windows 10 is here for your phone</h4>
+        </div>
+        <div class="modal-body">
+        	<p><img src="images/m3.png" alt="Generic placeholder image" width="500" height="140"></p>
+        	<h3>Microsoft Lumia 950 XL</h3>
+          <p>With a stunning 5.7” Quad HD display and a powerful octa-core processor, it’s the Lumia you’ve been waiting for. Get the phone that works like your PC and push the limits of what’s possible.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette"><a name="deal"></a>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">$500 off with Xfinity Triple Play <span class="text-muted">iPhone X</span></h2>
+          <p class="lead">The best deal available (so far) is Xfinity’s offer, which gives customers a $500 gift card with an iPhone X purchase, no trade-in required.</p>
+          <p>With iPhone X, the device is the display. An all‑new 5.8‑inch Super Retina screen fills the hand and dazzles the eyes.</p>
+          <p>The display employs new techniques and technology to precisely follow the curves of the design, all the way to the elegantly rounded corners.</p>
+          <p>The first OLED screen that rises to the standards of iPhone, with accurate, stunning colors, true blacks, high brightness, and a 1,000,000 to 1 contrast ratio.</p>
+          <p>A tiny space houses some of the most sophisticated technology we’ve ever developed, including the cameras and sensors that enable Face ID.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="images/deal1.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Save up to $300 instantly on the Galaxy S8 and Note8<span class="text-muted"></span></h2>
+          <p class="lead">Up to $300 savings with eligible trade-in. Free 1 month of Samsung Premium Care.Free shipping on all orders</p>
+          <p>The Samsung Galaxy S8 and Galaxy S8+ give you the flexibility and freedom to accomplish more than you ever imagined. The efficient MSM 8998 Octa Core processor enables you to multi-task like a pro, taking advantage of the familiar and intuitive desktop-style home screen and seamless access to apps designed specifically for the world’s first infinity display.</p>
+          <p>The Samsung Galaxy S8 and Galaxy S8+ offer a selection of biometric authentication, including a fingerprint scanner and iris scanner so users can select the method that works best for them.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="images/deal2.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Save $301 <span class="text-muted">Alcatel Idol</span></h2>
+          <p class="lead">Get an Unlocked Alcatel Idol 4S and VR goggles for only $169.</p>
+          <p>The Alcatel IDOL 4S is a high-powered, multi-purpose phone designed for the boardroom and beyond. It delivers indispensable business features like Windows 10 and Microsoft Continuum, which give it PC-like power. And it’s the first Windows phone to come with an out-of-the-box virtual reality experience, perfect for when the workday ends and the fun begins.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="images/deal3.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+<!-- <div id="header">
+   
+    <div id="leftsidebar">
+
+        <form id="signin" name="signin">
+          <div class="form-group">
+                  <input type="text" name="email" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success" onclick="signinnow()">Sign in</button>
+          
+            <script>
+                function signinnow() {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.onreadystatechange = function() {
+                        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                            var obj = JSON.parse(xmlHttp.responseText);
+                            if (typeof obj === 'string'){
+                                alert("Error");
+                            } else {
+                                alert("Sign in Success");
+                                var params = obj.CustomerID;
+                                // invoke getHistory();
+                                params = params + '';
+                                var header = document.getElementById("header");
+                                var purchasehistory = document.getElementById("purchasehistory");
+                                var searchbar = document.getElementById('searchbardiv');
+                                var productslist = document.getElementById('productslist');
+                                header.style.display = "none";
+                                purchasehistory.style.display = "";// equal to blcok
+                                searchbar.style.display="";
+                                productslist.style.display="";
+                                getHistory(params);
+                            }
+                        }
+                    }
+                    xmlHttp.open("POST", "http://45.78.59.251:8080/signin", true);
+                    // xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                    var data = new FormData(document.forms['signin']);
+                    xmlHttp.send(data);
+
+                }
+
+                function getHistory(params) {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.onreadystatechange = function() {
+                        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+                            var history = JSON.parse(xmlHttp.responseText);
+                            var text ="<table><tr><td>ProductName<td>Price</td><td>Quantity</td><td>Data</td><br>"
+                            if(typeof history === 'string') {
+                                alert("get history fail");
+                            }else{
+                                alert('get history success');
+                                // alert("length: " + history.length);
+                                for(var i = 0; i < history.length; i++) {
+                                    text += "<tr><td>" + history[i].Name +
+                                        "</td><td>" + history[i].Price + "</td><td>" +
+                                        history[i].Quantity + "</td><td>" +
+                                        history[i].Date + "</td></tr><br>";
+                                }
+                            }
+                            text = text + "</table>";
+                            document.getElementById("purchasehistory").innerHTML = text;
+                        }
+                    }
+                    var formData = new FormData();
+                    formData.append('customerid' ,params)
+                    xmlHttp.open("POST", "http://45.78.59.251:8080/history", true);
+                    // xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xmlHttp.send(formData);
+                }
+            </script>
+        </form>
+    </div>
+</div> -->
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Ele Company.</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+  <style media="screen">
+    *{
+        box-sizing: border-box;
+    }
+    #signin label{
+        width: 100px;
+        display: inline-block;
+    }
+    #leftsidebar{
+        float: right;
+        width: 49%;
+        border: 25px solid #9e9e9e;
+        padding: 15px;
+        margin: auto;
+        text-align: center;
+    }
+    #signup {
+        float: right;
+        width: 49%;
+        border: 25px solid #9e9e9e;
+        padding: 15px;
+        margin: auto;
+        height: 700px;
+        text-align: center;
+    }
+    #signup p label{
+        width: 100px;
+        display: inline-block;
+    }
+    #personal label{
+        width: 100px;
+        display: inline-block;
+    }
+    #business label{
+        width: 100px;
+        display: inline-block;
+    }
+</style>
+</html>
